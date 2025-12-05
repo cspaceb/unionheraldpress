@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Union Herald Press",
+  title: "Union Herald Press ***",
   description: "News that everyone can get into.",
 };
 
