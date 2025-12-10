@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 # fly.toml app configuration file generated for unionheraldpress-autumn-lake-858 on 2025-12-09T19:28:19-06:00
+=======
+# fly.toml app configuration file generated for unionheraldpress on 2025-12-10T00:56:57Z
+>>>>>>> 873c66246b5c2e8a7e5613a933a29aabed4a5d4c
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
+<<<<<<< HEAD
 app = 'unionheraldpress-autumn-lake-858'
+
 primary_region = 'iad'
 
 [build]

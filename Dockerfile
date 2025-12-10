@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 
+<<<<<<< HEAD
 ARG PYTHON_VERSION=3.14.0
+
 
 FROM python:${PYTHON_VERSION}-slim
 
