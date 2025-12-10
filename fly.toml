@@ -5,9 +5,10 @@ app = "unionheraldpress-autumn-lake-858"
 primary_region = "iad"
 
 [build]
-  dockerfile = "Dockerfile"
+  builder = "paketobuildpacks/builder-jammy-base"
 
 [env]
+  FLASK_APP = "app.py"
   PORT = "8080"
 
 [http_service]
