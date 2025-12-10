@@ -1,7 +1,7 @@
 # fly.toml — clean configuration for UnionHeraldPress
 # See https://fly.io/docs/reference/configuration/
 
-app = "unionheraldpress-autumn-lake-858"
+app = "unionheraldpress"
 primary_region = "iad"
 
 [build]
