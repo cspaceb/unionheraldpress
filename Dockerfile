@@ -1,21 +1,22 @@
 # syntax=docker/dockerfile:1
 
-ARG PYTHON_VERSION=3.14.0
-FROM python:${PYTHON_VERSION}-slim
+FROM python:3.12-slim
 
 LABEL fly_launch_runtime="flask"
 
 WORKDIR /code
 
-# Install dependencies
+# Dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
+# Copy project
 COPY . .
 
-# Expose Fly.io port
 EXPOSE 8080
 
-# Start Flask app
-CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=8080"]
+# Ensure Flask knows what to run
+ENV FLASK_APP=app.py
+ENV PORT=8080
+
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=8080"]
