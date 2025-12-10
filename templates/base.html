@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Union Herald Press{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% block meta %}{% endblock %}
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo">Union Herald Press</div>
+</header>
+
+<main class="page">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <small>⚠️ 100% fake. 0% fact-checking.</small>
+</footer>
+
+</body>
+</html>

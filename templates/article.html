@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.headline }} | Union Herald Press{% endblock %}
+
+{% block meta %}
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ article.headline }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:image" content="{{ og_url }}">
+  <meta property="og:site_name" content="Union Herald Press">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ article.headline }}">
+  <meta name="twitter:image" content="{{ og_url }}">
+{% endblock %}
+
+{% block content %}
+<section class="article-wrapper">
+
+  <h1 class="article-headline">{{ article.headline }}</h1>
+
+  <div class="article-image-frame">
+    <img src="{{ troll_url }}" alt="article image">
+  </div>
+
+  <p class="share-hint">
+    Share this URL to unleash your masterpiece:
+    <br>
+    <code>{{ page_url }}</code>
+  </p>
+
+</section>
+{% endblock %}

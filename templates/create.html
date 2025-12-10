@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Create Fake Article | Union Herald Press{% endblock %}
+
+{% block content %}
+<section class="card">
+  <h1>Create a fake front-page moment</h1>
+  <p class="subtitle">
+    Craft your headline, pick a preview image for link sharing, then upload a troll
+    image that appears only after someone clicks the link.
+  </p>
+
+  {% if error %}
+    <div class="alert">{{ error }}</div>
+  {% endif %}
+
+  <form method="post" enctype="multipart/form-data" class="form">
+
+    <label class="field">
+      <span>Headline</span>
+      <input
+        type="text"
+        name="headline"
+        placeholder="Mayor declares citywide mandatory nap day"
+        required
+      >
+    </label>
+
+    <label class="field">
+      <span>Share preview image (OG image)</span>
+      <input type="file" name="og_image" accept="image/*" required>
+      <small class="hint">
+        This is the image that appears in Twitter, Facebook, and iMessage previews.
+      </small>
+    </label>
+
+    <label class="field">
+      <span>Article troll image</span>
+      <input type="file" name="troll_image" accept="image/*" required>
+      <small class="hint">
+        This is the image viewers will see on the actual page.
+      </small>
+    </label>
+
+    <button type="submit" class="btn-primary">Generate Link</button>
+  </form>
+</section>
+{% endblock %}
